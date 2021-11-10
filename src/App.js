@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Greet from './components/Greet';
+import Message from './components/Message';
+import Button from './components/Button';
 
 function App() {
   return (
@@ -9,6 +12,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload. - Doctora - Bounding Joy
         </p>
+        <Greet name="james " heroName="Spider Man"/>
+        <Greet name="あなた " heroName="ひつがや "/>
+        <Greet name="ドク " heroName="The Hulk"/>
+        <Message/>
+       <Button/>
+        <p>Test</p>
         <a
           className="App-link"
           href="https://reactjs.org"
