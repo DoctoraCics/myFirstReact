@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import helloService from "../services/helloService";
 
 const Hello = () => {
     //function hooks
