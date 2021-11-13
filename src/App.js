@@ -3,6 +3,7 @@ import './App.css';
 import Greet from './components/Greet';
 import Message from './components/Message';
 import Button from './components/Button';
+import Hello from './components/Hello';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Greet name="james " heroName="Spider Man"/>
         <Greet name="あなた " heroName="ひつがや "/>
         <Greet name="ドク " heroName="The Hulk"/>
+        <Greet name={Hello()} heroName = "spiderman"/>
         <Message/>
        <Button/>
         <p>Test</p>
