@@ -5,8 +5,6 @@ class Button extends React.Component
         super()
         this.state = {
             count : 0
-
-
         }
     }
     addCount = () => {
