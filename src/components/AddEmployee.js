@@ -8,13 +8,13 @@ const AddEmployee = () => {
     const [location,setLocation] = useState("")
     const [department,setDepartment] = useState("")
     const navigate =useNavigate()
-    const {employeeId} = useParams()
+    const {employee_id} = useParams()
 
     const saveEmployee = (e) => {
         e.preventDefault()
-        if (employeeId) {
+        if (employee_id) {
             //Update the employee
-            const employee = {employeeId, name, location, department}
+            const employee = {employee_id, name, location, department}
             EmployeeService.putEmployee(employee)
             .then(response => {
                 console.log("Employee updated!", response.data)
@@ -40,8 +40,8 @@ const AddEmployee = () => {
 
         //Hooks
         useEffect(() => {
-            if(employeeId){
-                EmployeeService.getEmployee(employeeId)
+            if(employee_id){
+                EmployeeService.getEmployee(employee_id)
                 .then(response => {
                     setName(response.data.name)
                     setLocation(response.data.location)
