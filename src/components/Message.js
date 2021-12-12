@@ -1,8 +1,7 @@
-
 const Message = () =>{
     return(
         <div>
-             <p>testing the waters</p>
+             <p>My Website</p>
         </div>
        
     );
