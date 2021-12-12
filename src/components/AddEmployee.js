@@ -12,12 +12,9 @@ const AddEmployee = () => {
 
     const saveEmployee = (e) => {
         e.preventDefault()
-
-        const employee = {name, location, department, employeeId}
-
         if (employeeId) {
-
             //Update the employee
+            const employee = {employeeId, name, location, department}
             EmployeeService.putEmployee(employee)
             .then(response => {
                 console.log("Employee updated!", response.data)
@@ -29,6 +26,7 @@ const AddEmployee = () => {
 
         }
         else {
+            const employee = {name, location, department}
             EmployeeService.postEmployee(employee)
             .then(response => {
                     console.log("Employee Added!", response.data)
@@ -45,7 +43,7 @@ const AddEmployee = () => {
             if(employeeId){
                 EmployeeService.getEmployee(employeeId)
                 .then(response => {
-                    setName (response.data, location)
+                    setName(response.data.name)
                     setLocation(response.data.location)
                     setDepartment(response.data.department)
                 })
@@ -54,22 +52,6 @@ const AddEmployee = () => {
                 })
             }
         },[])
-
-        useEffect(() => {
-            if(employeeId){
-                EmployeeService.getEmployee(employeeId)
-                .then(
-                    employee =>{
-                        setName(employee.data.name);
-                        setLocation(employee.data.location);
-                        setDepartment(employee.data.department);
-                    }
-                )
-                .catch(error => {
-                    console.log("Error on Employee Id")
-                })
-            }
-        })
     
         return (
             <div>
