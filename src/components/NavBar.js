@@ -10,8 +10,8 @@ const NavBar = () => {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <a className="nav-link" href="/myFirstReact">Home<span className="sr-only"></span></a>
-                    <a className="nav-link" href="/myfirstreact/employee">Employees</a>
-                    <a className="nav-link" href="/myfirstreact/add">Add Employees</a>
+                    <a className="nav-link" href="/myFirstReact/employee">Employees</a>
+                    <a className="nav-link" href="/myFirstReact/add">Add Employees</a>
                     <a className="nav-link disabled" href="/">Disabled</a>
                 </div>
             </div>
