@@ -17,8 +17,8 @@ const putEmployee = (data) => {
     return httpCommon.put('/employees', data)
 }
 
-const deleteEmployee = (employee_id) => {
-    return httpCommon.delete(`/employees/${employee_id}`)
+const deleteEmployee = (employeeId) => {
+    return httpCommon.delete(`/employees/${employeeId}`)
 }
 
 export default {getEmployees, postEmployee, getEmployee, putEmployee, deleteEmployee}
