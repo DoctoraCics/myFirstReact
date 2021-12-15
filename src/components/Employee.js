@@ -55,9 +55,9 @@ const Employee = () => {
         <table className = "table table-light table-bordered table-hover table-stripped" >
         <thead>
             <tr className = "table-light">
-                <td>ID</td>
                 <td>Name</td>
                 <td>Department</td>
+                <td>Location</td>
                 <td>Actions</td>
             </tr>
         </thead>
@@ -71,7 +71,7 @@ const Employee = () => {
                         <td>{employee.location}</td>
                         <td>
                             <div>
-                                <Link className = "btn btn-primary" to={`/employee/edit/${employee.employeeId}`}>Update</Link>
+                                <Link className = "btn btn-primary" to={`/myfirstreact/employee/edit/${employee.employeeId}`}>Update</Link>
                                 <button className = "btn btn-danger" onClick={() =>deleteEmployee(employee.employeeId)}>Delete</button>
 
                             </div>

@@ -18,7 +18,7 @@ const AddEmployee = () => {
             EmployeeService.putEmployee(employee)
             .then(response => {
                 console.log("Employee updated!", response.data)
-                navigate("/employee")
+                navigate("/myfirstreact/employee")
             })
             .catch(error => {
                 console.log("Error putting Employee!")
@@ -30,7 +30,7 @@ const AddEmployee = () => {
             EmployeeService.postEmployee(employee)
             .then(response => {
                     console.log("Employee Added!", response.data)
-                    navigate("/employee")
+                    navigate("/myfirstreact/employee")
                 })
                 .catch(error => {
                     console.log("Error posting Employee")
